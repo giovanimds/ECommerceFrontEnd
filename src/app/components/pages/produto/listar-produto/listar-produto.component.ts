@@ -24,6 +24,7 @@ export class ListarProdutoComponent implements OnInit {
         this.http.post<Produto>("https://localhost:5001/api/produto/cadastrar", Produto)
             .subscribe({next:(Produto) => {
                     alert("OK")
+                    this.ngOnInit();
                 }}
             )
     }
