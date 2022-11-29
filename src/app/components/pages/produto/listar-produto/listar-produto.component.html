@@ -1,17 +1,17 @@
 <h1>PRODUTOS</h1>
-<table>
+<table class="bg-dark" class="catalogo">
     <thead>
-        <tr>Rotulo</tr>
-        <tr>Marca</tr>
-        <tr>Preco</tr>
-        <tr>Quantidade</tr>
-        <tr>Adicionar ao Carrinho</tr>
+        <td>Rotulo</td>
+        <td>Marca</td>
+        <td>Preco</td>
+        <td>Quantidade</td>
+        <td>Adicionar ao Carrinho</td>
     </thead>
     <tr *ngFor="let produto of produtos">
         <td>{{produto.Rotulo}}</td>
         <td>{{produto.Marca}}</td>
         <td>{{produto.Preco}}</td>
         <td>{{produto.Quantidade}}</td>
-        <td><input type="submit" (click)="adicionarAoCarrinho(produto)" /></td>
+        <td><input type="submit" (click)="adicionarAoCarrinho(produto.ProdutoId)" /></td>
     </tr>
 </table>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Produto} from "../../../../models/Produto";
+import {Usuario} from "../../../../models/Usuario";
 
 @Component({
     selector: 'app-listar-produto',
@@ -9,6 +10,7 @@ import {Produto} from "../../../../models/Produto";
 })
 export class ListarProdutoComponent implements OnInit {
     produtos: Produto[] = [];
+    usuario!: Usuario;
 
     constructor(private http: HttpClient) { }
 
@@ -20,8 +22,8 @@ export class ListarProdutoComponent implements OnInit {
             )
     }
 
-    adicionarAoCarrinho(Produto: Produto): void{
-        this.http.post<Produto>("https://localhost:5001/api/produto/cadastrar", Produto)
+    adicionarAoCarrinho(Produto: number): void{
+        this.http.post<Produto>("https://localhost:5001/api/produto/adicionar", Produto)
             .subscribe({next:(Produto) => {
                     alert("OK")
                     this.ngOnInit();

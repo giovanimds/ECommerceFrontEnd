@@ -7,7 +7,9 @@ import { CadastrarUsuarioComponent } from './components/pages/usuario/cadastrar-
 import { ListarProdutoComponent } from './components/pages/produto/listar-produto/listar-produto.component';
 import { ListarCarrinhoComponent } from './components/pages/carrinho/listar-carrinho/listar-carrinho.component';
 import {HttpClient, HttpClientModule} from "@angular/common/http";
-import { BuscarUsuarioComponent } from './buscar-usuario/buscar-usuario.component';
+import { BuscarUsuarioComponent } from './components/pages/usuario/buscar-usuario/buscar-usuario.component';
+import { AuthModule } from "@auth0/auth0-angular";
+import { AuthButtonComponent } from './auth/auth-button/auth-button.component';
 
 
 @NgModule({
@@ -17,12 +19,17 @@ import { BuscarUsuarioComponent } from './buscar-usuario/buscar-usuario.componen
     CadastrarUsuarioComponent,
     ListarProdutoComponent,
     ListarCarrinhoComponent,
-    BuscarUsuarioComponent
+    BuscarUsuarioComponent,
+    AuthButtonComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    AuthModule.forRoot({
+      domain: 'giovani-mrsc.us.auth0.com',
+      clientId: 'sC3AXQpAAYc9ceLC6Qvr3SAsmLflM0q7'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
