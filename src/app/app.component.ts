@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthService } from '@auth0/auth0-angular';
+import {Produto} from "./models/Produto";
 
 @Component({
     selector: 'app-root',
@@ -8,5 +9,6 @@ import { AuthService } from '@auth0/auth0-angular';
 })
 
 export class AppComponent {
-    constructor(public auth: AuthService) { }
+    constructor(public auth: AuthService){}
+    produtos: Produto[] = [];
 }

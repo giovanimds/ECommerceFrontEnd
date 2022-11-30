@@ -9,7 +9,6 @@ export interface Produto{
     Preco: number;
     Quantidade: number;
 
-    Carrinhos?: Carrinho[];
-    Historico?: Historico;
+
 
 }
