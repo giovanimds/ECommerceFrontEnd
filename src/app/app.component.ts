@@ -9,6 +9,5 @@ import {Produto} from "./models/Produto";
 })
 
 export class AppComponent {
-    constructor(public auth: AuthService){}
-    produtos: Produto[] = [];
+
 }

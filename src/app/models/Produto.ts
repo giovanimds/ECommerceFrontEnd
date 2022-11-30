@@ -1,6 +1,3 @@
-import {Carrinho} from "./Carrinho";
-import { Historico } from "./Historico";
-
 export interface Produto{
 
     ProdutoId: number;

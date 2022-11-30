@@ -10,6 +10,7 @@ import {HttpClient, HttpClientModule} from "@angular/common/http";
 import { BuscarUsuarioComponent } from './components/pages/usuario/buscar-usuario/buscar-usuario.component';
 import { AuthModule } from "@auth0/auth0-angular";
 import { AuthButtonComponent } from './auth/auth-button/auth-button.component';
+import {FormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -22,15 +23,16 @@ import { AuthButtonComponent } from './auth/auth-button/auth-button.component';
     BuscarUsuarioComponent,
     AuthButtonComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    AuthModule.forRoot({
-      domain: 'giovani-mrsc.us.auth0.com',
-      clientId: 'sC3AXQpAAYc9ceLC6Qvr3SAsmLflM0q7'
-    })
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        AuthModule.forRoot({
+            domain: 'giovani-mrsc.us.auth0.com',
+            clientId: 'sC3AXQpAAYc9ceLC6Qvr3SAsmLflM0q7'
+        }),
+        FormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
