@@ -22,8 +22,9 @@ export class ListarProdutoComponent implements OnInit {
                 {
                     next: (produtos) => {
                         this.produtos = produtos;
-                    },
+                    }
                 })
+        
     }
 
     adicionarAoCarrinho(Produto: number): void {
