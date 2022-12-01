@@ -1,1 +1,6 @@
-<p>listar-carrinho works!</p>
+<p>Carrinho</p>
+<p>{{ this.carrinho.carrinhoId }} - {{ this.carrinho.produtos.length }}</p>
+<ul>
+    <li *ngFor="let p of carrinho.produtos">{{p.rotulo}} - {{p.preco}}</li>
+</ul>
+<button class="btn btn-primary" (click)="finalizar()">Finalizar Compra</button>

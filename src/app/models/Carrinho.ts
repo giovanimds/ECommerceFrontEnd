@@ -3,11 +3,10 @@ import { Usuario } from "./Usuario";
 
 export interface Carrinho{
 
-    CarrinhoId: number;
+    carrinhoId: number;
 
-    UsuarioId: number;
-    Usuario: Usuario;
+    email: string;
 
-    Produtos: Produto[];
+    produtos: Produto[];
 
 }

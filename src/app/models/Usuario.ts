@@ -4,7 +4,7 @@ export interface Usuario{
     Nome: string;
     Senha: string;
     Cpf: string;
-    Email: string;
+    Email?: string;
     Funcao: string;
 
 }

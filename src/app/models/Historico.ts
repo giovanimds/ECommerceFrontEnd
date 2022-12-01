@@ -3,12 +3,9 @@ import {Produto} from "./Produto";
 
 export interface Historico{
 
-    HistoricoId: number;
+    historicoId: number;
+    produtos: Produto[];
+    email: string;
 
-    UsuarioId: number;
-    Usuario: Usuario;
-
-    ProdutoId: number;
-    Produto: Produto;
 
 }

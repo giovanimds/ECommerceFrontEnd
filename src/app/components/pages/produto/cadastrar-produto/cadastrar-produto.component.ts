@@ -10,11 +10,11 @@ import {Produto} from "../../../../models/Produto";
 export class CadastrarProdutoComponent implements OnInit {
 
     Produto: Produto = {
-        Rotulo: "",
-        ProdutoId: 0,
-        Quantidade: 0,
-        Preco: 0,
-        Marca: ""
+        rotulo: "",
+        produtoId: 0,
+        quantidade: 0,
+        preco: 0,
+        marca: ""
 
     }
 

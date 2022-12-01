@@ -11,6 +11,7 @@ import { BuscarUsuarioComponent } from './components/pages/usuario/buscar-usuari
 import { AuthModule } from "@auth0/auth0-angular";
 import { AuthButtonComponent } from './auth/auth-button/auth-button.component';
 import {FormsModule} from "@angular/forms";
+import { ListarHistoricoComponent } from './components/pages/historico/listar-historico/listar-historico.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import {FormsModule} from "@angular/forms";
     ListarCarrinhoComponent,
     BuscarUsuarioComponent,
     AuthButtonComponent,
+    ListarHistoricoComponent,
   ],
     imports: [
         BrowserModule,
@@ -29,7 +31,8 @@ import {FormsModule} from "@angular/forms";
         HttpClientModule,
         AuthModule.forRoot({
             domain: 'giovani-mrsc.us.auth0.com',
-            clientId: 'sC3AXQpAAYc9ceLC6Qvr3SAsmLflM0q7'
+            clientId: 'sC3AXQpAAYc9ceLC6Qvr3SAsmLflM0q7',
+            useRefreshTokens: true
         }),
         FormsModule
     ],

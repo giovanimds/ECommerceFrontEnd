@@ -1,10 +1,10 @@
 export interface Produto{
 
-    ProdutoId: number;
-    Rotulo: string;
-    Marca: string;
-    Preco: number;
-    Quantidade: number;
+    produtoId: number;
+    rotulo: string;
+    marca: string;
+    preco: number;
+    quantidade: number;
 
 
 

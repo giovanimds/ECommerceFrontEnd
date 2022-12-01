@@ -5,15 +5,15 @@
             <strong >{{ user.name }}</strong>
         </a>
         <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
-            <li><a class="dropdown-item" href="#">New project...</a></li>
-            <li><a class="dropdown-item" href="#">Settings</a></li>
+            <li><a class="dropdown-item" routerLink="carrinho">Carrinho</a></li>
+            <li><a class="dropdown-item" routerLink="historico">Historico</a></li>
             <li><a class="dropdown-item" routerLink="conta">Profile</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" (click)="auth.logout()" >Sign out</a></li>
+            <li><a class="btn btn-primary dropdown-item" (click)="auth.logout()" >Sign out</a></li>
         </ul>
     </div>
 </ng-container>
 
 <ng-template #loggedOut>
-    <a class="btn btn-primary" (click)="auth.loginWithRedirect()">Log in</a>
+    <a class="btn btn-primary" (click)="login()">Log in</a>
 </ng-template>

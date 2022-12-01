@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import { AuthService } from '@auth0/auth0-angular';
-import {Produto} from "./models/Produto";
 
 @Component({
     selector: 'app-root',
@@ -9,5 +8,9 @@ import {Produto} from "./models/Produto";
 })
 
 export class AppComponent {
+
+    constructor(public auth: AuthService) {
+    }
+
 
 }
