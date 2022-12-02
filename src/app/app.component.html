@@ -14,30 +14,16 @@
                             Inicio
                         </a>
                     </li>
-                    <li>
-                        <a href="#" class="nav-link text-white">
-                            <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
-                            Marcas
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="nav-link text-white">
-                            <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"></use></svg>
-                            Categorias
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="nav-link text-white">
-                            <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
-                            Promoções
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="nav-link text-white">
-                            <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
-                            Ajuda
-                        </a>
-                    </li>
+                    <div *ngIf="role !== undefined">
+                        <li *ngIf="role == 'ADM'">
+                            <a routerLink="cadastrar-produto" class="nav-link text-white">
+                                <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
+                                Cadastrar Produto
+                            </a>
+                        </li>
+                    </div>
+
+
                 </ul>
                 <hr>
                 <app-auth-button>

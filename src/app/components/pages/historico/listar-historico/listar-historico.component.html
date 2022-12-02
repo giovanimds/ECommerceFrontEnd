@@ -1,9 +1,21 @@
 <h1>HISTORICO</h1>
-<table>
-    <thead>
-        <th>Rotulo</th><th>Marca</th><th>Preco</th>
-    </thead>
-    <tr *ngFor="let h of historico">
-        <td>{{h.email}}</td>
-    </tr>
-</table>
+<div class="row">
+    <div class="col" *ngFor="let h of historico">
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th><th scope="col">Rotulo</th><th scope="col">Marca</th><th scope="col">Preco</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let produto of h.produtos">
+                    <th scope="row">{{produto.produtoId}}</th>
+                    <td>{{produto.rotulo}}</td>
+                    <td>{{produto.marca}}</td>
+                    <td>{{produto.preco}}</td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+</div>

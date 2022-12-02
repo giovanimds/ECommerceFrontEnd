@@ -1,6 +1,6 @@
 <p>cadastrar-produto</p>
-<input placeholder="Rotulo" type="text" [@ngModel]="Produto.rotulo" /><br />
-<input placeholder="Marca" type="text" [@ngModel]="Produto.marca" /><br />
-<input placeholder="Preco" type="number" [@ngModel]="Produto.preco" /><br />
-<input placeholder="Quantidade" type="number" [@ngModel]="Produto.quantidade" /><br />
+<input placeholder="Rotulo" type="text" [(ngModel)]="rotulo" /><br />
+<input placeholder="Marca" type="text" [(ngModel)]="marca" /><br />
+<input placeholder="Preco" type="number" [(ngModel)]="preco" /><br />
+<input placeholder="Quantidade" type="number" [(ngModel)]="quantidade" /><br />
 <input value="Cadastrar" (click)="cadastrar()" type="submit" /><br />

@@ -9,6 +9,10 @@ import {Produto} from "../../../../models/Produto";
 })
 export class CadastrarProdutoComponent implements OnInit {
 
+    rotulo!: string;
+    quantidade!: number;
+    preco!: number;
+    marca!: string;
     Produto: Produto = {
         rotulo: "",
         produtoId: 0,
@@ -25,7 +29,13 @@ export class CadastrarProdutoComponent implements OnInit {
     }
 
     cadastrar(): void {
-
+        this.Produto = {
+            produtoId: 0,
+            rotulo: this.rotulo,
+            preco: this.preco,
+            marca: this.marca,
+            quantidade: this.quantidade
+        }
         this.http.post<Produto>("https://localhost:5001/api/produto/cadastrar", this.Produto)
             .subscribe({next: (Produto) => {
                 alert("Cadastrado!")

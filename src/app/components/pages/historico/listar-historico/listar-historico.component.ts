@@ -14,21 +14,25 @@ export class ListarHistoricoComponent implements OnInit {
     constructor(public http: HttpClient, public auth: AuthService) { }
 
     ngOnInit(): void {
-        let email
+        let email: string
         this.auth.user$.subscribe((user) =>{
-            if(user == User){
+            if(user?.email !== undefined && user.email !== null){
                 email = user.email
-                this.http.get<Historico[]>("https://localhost:4200/api/historico/listar/"+email)
-                    .subscribe((historico) => {
-                            console.table(historico)
-                            this.historico = historico
-                        }
-                    )
+                this.listarHistorico(email)
             }
         })
 
 
 
+    }
+
+    listarHistorico(email:string):void{
+        this.http.get<Historico[]>("https://localhost:5001/api/historico/listar/"+email)
+            .subscribe((historico) => {
+                    console.table(historico)
+                    this.historico = historico
+                }
+            )
     }
 
 }

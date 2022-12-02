@@ -24,7 +24,7 @@ export class AuthButtonComponent implements OnInit {
         let email = value.email
         this.http.get<Carrinho>("https://localhost:5001/api/carrinho/buscar/".concat(email))
             .subscribe((carrinho) => {
-                  if(carrinho == null || undefined){
+                  if(carrinho == null || carrinho == undefined){
                     carrinho = {
                       produtos: [],
                       email: email,
